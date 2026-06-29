@@ -162,7 +162,7 @@ export default async function Home() {
                 A bright people directory for names, roles, email IDs, mobile numbers, and locations.
               </p>
             </div>
-            <div className="w-full max-w-sm space-y-4 md:w-80">
+            <div className="w-full max-w-xs space-y-3 md:w-52">
               <div className="overflow-hidden rounded-lg bg-white/20 p-2 ring-1 ring-white/30 backdrop-blur">
                 <Image
                   src="/images/nowon-people.png"
@@ -170,12 +170,12 @@ export default async function Home() {
                   width={1200}
                   height={900}
                   priority
-                  className="aspect-[4/3] w-full rounded-md object-cover shadow-2xl shadow-slate-950/20"
+                  className="h-28 w-full rounded-md object-cover shadow-2xl shadow-slate-950/20"
                 />
               </div>
-              <div className="grid gap-2 rounded-lg bg-white/18 px-5 py-4 text-white ring-1 ring-white/25 backdrop-blur">
+              <div className="grid gap-1 rounded-lg bg-white/18 px-4 py-3 text-white ring-1 ring-white/25 backdrop-blur">
                 <div className="flex items-center justify-between gap-4">
-                  <p className="text-3xl font-semibold">{profiles.length}</p>
+                  <p className="text-2xl font-semibold">{profiles.length}</p>
                   <Star className="h-5 w-5 text-amber-200" aria-hidden="true" />
                 </div>
                 <p className="text-sm text-white/80">live profile{profiles.length === 1 ? "" : "s"}</p>
@@ -210,6 +210,7 @@ export default async function Home() {
     </main>
   );
 }
+
 
 
 
