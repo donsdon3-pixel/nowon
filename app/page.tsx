@@ -162,19 +162,19 @@ export default async function Home() {
                 A bright people directory for names, roles, email IDs, mobile numbers, and locations.
               </p>
             </div>
-            <div className="flex w-16 shrink-0 flex-col gap-1.5 justify-self-start md:justify-self-end">
+            <div className="flex w-28 shrink-0 flex-col gap-2 justify-self-start md:justify-self-end">
               <div className="overflow-hidden rounded-md bg-white/20 p-1 ring-1 ring-white/30 backdrop-blur">
                 <Image
                   src="/images/nowon-people.png"
                   alt="A smiling man and woman representing nowon profile members"
-                  width={64}
-                  height={80}
-                  sizes="64px"
+                  width={112}
+                  height={144}
+                  sizes="112px"
                   priority
-                  className="h-20 w-16 rounded object-cover shadow-md shadow-slate-950/20"
+                  className="h-36 w-28 rounded object-cover object-center shadow-lg shadow-slate-950/25"
                 />
               </div>
-              <div className="rounded-md bg-white/18 px-2 py-1 text-white ring-1 ring-white/25 backdrop-blur">
+              <div className="rounded-md bg-white/18 px-2.5 py-1.5 text-white ring-1 ring-white/25 backdrop-blur">
                 <div className="flex items-center justify-between gap-2">
                   <p className="text-sm font-semibold leading-none">{profiles.length}</p>
                   <Star className="h-3 w-3 text-amber-200" aria-hidden="true" />
