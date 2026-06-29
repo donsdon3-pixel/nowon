@@ -162,23 +162,24 @@ export default async function Home() {
                 A bright people directory for names, roles, email IDs, mobile numbers, and locations.
               </p>
             </div>
-            <div className="w-full max-w-48 space-y-2 md:w-40">
-              <div className="overflow-hidden rounded-md bg-white/20 p-1.5 ring-1 ring-white/30 backdrop-blur">
+            <div className="flex w-16 shrink-0 flex-col gap-1.5 justify-self-start md:justify-self-end">
+              <div className="overflow-hidden rounded-md bg-white/20 p-1 ring-1 ring-white/30 backdrop-blur">
                 <Image
                   src="/images/nowon-people.png"
                   alt="A smiling man and woman representing nowon profile members"
-                  width={1200}
-                  height={900}
+                  width={64}
+                  height={80}
+                  sizes="64px"
                   priority
-                  className="h-12 w-full rounded object-cover shadow-lg shadow-slate-950/20"
+                  className="h-20 w-16 rounded object-cover shadow-md shadow-slate-950/20"
                 />
               </div>
-              <div className="grid gap-0.5 rounded-md bg-white/18 px-3 py-2 text-white ring-1 ring-white/25 backdrop-blur">
-                <div className="flex items-center justify-between gap-4">
-                  <p className="text-lg font-semibold">{profiles.length}</p>
-                  <Star className="h-4 w-4 text-amber-200" aria-hidden="true" />
+              <div className="rounded-md bg-white/18 px-2 py-1 text-white ring-1 ring-white/25 backdrop-blur">
+                <div className="flex items-center justify-between gap-2">
+                  <p className="text-sm font-semibold leading-none">{profiles.length}</p>
+                  <Star className="h-3 w-3 text-amber-200" aria-hidden="true" />
                 </div>
-                <p className="text-xs text-white/80">live profile{profiles.length === 1 ? "" : "s"}</p>
+                <p className="mt-1 text-[10px] leading-none text-white/80">live profile{profiles.length === 1 ? "" : "s"}</p>
               </div>
             </div>
           </div>
