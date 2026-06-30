@@ -108,7 +108,7 @@ function ProfileForm() {
           </div>
           <div>
             <h2 className="text-lg font-semibold">Create an identity profile</h2>
-            <p className="text-sm text-white/80">Add the first vibrant card to nowon.</p>
+            <p className="text-sm text-white/80">Add a vibrant card to nowon.</p>
           </div>
         </div>
       </div>
@@ -198,15 +198,24 @@ export default async function Home() {
           </div>
         ) : null}
 
-        {hasProfiles ? (
-          <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-            {profiles.map((profile) => (
-              <ProfileCard key={profile.id} profile={profile} />
-            ))}
-          </div>
-        ) : (
+        <div className="grid gap-6 lg:grid-cols-[minmax(320px,420px)_1fr] lg:items-start">
           <ProfileForm />
-        )}
+
+          {hasProfiles ? (
+            <div className="grid gap-4 md:grid-cols-2">
+              {profiles.map((profile) => (
+                <ProfileCard key={profile.id} profile={profile} />
+              ))}
+            </div>
+          ) : (
+            <div className="rounded-lg border border-white/80 bg-white/85 p-5 text-slate-700 shadow-soft backdrop-blur">
+              <h2 className="text-lg font-semibold text-slate-950">No profiles yet</h2>
+              <p className="mt-2 text-sm leading-6">
+                Submit the form to create the first profile card. The form will stay available for the next entry too.
+              </p>
+            </div>
+          )}
+        </div>
       </section>
     </main>
   );
